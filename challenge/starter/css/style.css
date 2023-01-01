@@ -110,7 +110,6 @@ h2 {
 .page-section-work h2 {
     display: flex;
     align-items: center;
-    justify-content: center;
     grid-area: h2;
 }
 
@@ -149,5 +148,26 @@ h2 {
   .page-section-work {
     display: flex;
     flex-direction: column;
+  }
+}
+
+/* contact */
+.page-section.contact {
+  display: flex;
+}
+
+.page-section.contact a {
+  flex: 1;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .page-section.contact {
+    flex-direction: column;
+  }
+  
+  .page-section.contact a {
+    flex: 1;
+    text-align: left;
   }
 }
