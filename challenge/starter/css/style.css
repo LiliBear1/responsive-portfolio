@@ -24,21 +24,21 @@ p {
 }
 
 header {
+  background-color: #353b47;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; I dont think this is doing anythng so have removed  */
   padding: 5px 0;
-  background-color: #353b47;
 }
 
 header h1 {
-  font-size: 30px;
-  width: 250px;
-  display: flex;
   background-color: powderblue;
   color: #353b47;
+  display: flex;
+  font-size: 30px;
   justify-content: flex-end;
   padding-right: 1%;
+  width: 250px;
 }
 
 li {
@@ -66,32 +66,34 @@ nav a {
 }
 
 .hero-banner div {
+  background-color: powderblue;
   position: absolute;
+  padding: 5px;
   right: 30px;
   top: 100px;
-  padding: 5px;
-  background-color: powderblue;
 }
 
 h2 {
   color: #353b47;
-  width: 0;
+  border-right: 3mm ridge rgb(115, 192, 218);
   font-size: 35px;
   display: flex;
   justify-content: flex-end;
-  text-align: right;
-  border-right: 3mm ridge rgb(115, 192, 218);
-  padding-right: 20px;
   min-width: 250px;
+  padding-right: 20px;
+  text-align: right;
+  width: 0;
 }
 
 /* About section */
-.page-section-about {
+.page-section-about,
+.page-section-work,
+.page-section-contact {
   align-self: center;
-  margin-top: 25px;
+  color: black;
   display: flex;
   flex-direction: row;
-  color: black;
+  margin-top: 25px;
 }
 
 /* portfolio container */
