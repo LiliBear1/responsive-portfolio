@@ -20,7 +20,7 @@ h6 {
 }
 
 p {
-  margin: 0;
+  margin: 10px;
 }
 
 header {
@@ -28,7 +28,7 @@ header {
   align-items: center;
   flex-wrap: wrap;
   padding: 5px 0;
-  background-color: #353b47 ;
+  background-color: #353b47;
 }
 
 header h1 {
@@ -44,13 +44,14 @@ header h1 {
 li {
   list-style: none;
 }
+
 nav ul {
   display: flex;
   min-width: 300px;
   justify-content: space-evenly;
   position: absolute;
   right: 0;
-  }
+}
 
 nav a {
   cursor: pointer;
@@ -73,28 +74,80 @@ nav a {
 }
 
 h2 {
-  color: dimgray;
+  color: #353b47;
+  width: 0;
+  font-size: 35px;
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  border-right: 3mm ridge rgb(115, 192, 218);
+  padding-right: 20px;
+  min-width: 250px;
 }
 
-/* Containers */
-.about-me {
-  grid-area:0 ;
-  border-right: 5px solid black;
-  margin: 5px;
+/* About section */
+.page-section-about {
+  align-self: center;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  color: black;
 }
 
-.about-text {
-  grid-area: 0;
-  border-right: 5px solid black;
-  margin: 5px;
+/* portfolio container */
+.page-section-work {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "h2 a a"
+    "h2 a a"
+    "h2 b c"
+    "h2 d e";
+  grid-gap: 10px;
 }
 
-#work {
+.page-section-work h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: h2;
+}
 
+#work-1 {
+  grid-area: a;
+  background-image: url(../images/02-portfolio-1.jpg);
+}
+
+#work-2 {
+  grid-area: b;
+  background-image: url(../images/02-portfolio-2.jpg);
+}
+
+#work-3 {
+  grid-area: c;
+  background-image: url(../images/02-portfolio-3.jpg);
+}
+
+#work-4 {
+  grid-area: d;
+  background-image: url(../images/02-portfolio-4.jpg);
+}
+
+#work-5 {
+  grid-area: e;
+  background-image: url(../images/02-run-buddy.jpg);
 }
 
 
+@media screen and (max-width: 480px) {
 
+  nav {
+    display: none;
+  }
 
-
-
+  .page-section-work {
+    display: flex;
+    flex-direction: column;
+  }
+}
